@@ -12,7 +12,7 @@ const LoadDataFormImageUrl = async ()=>{
     const image = document.getElementById('search-image');
     let url = '';
     console.log(image.value);
-    if(image.value !== '' || image.value  !== 'undefined'){
+    if(image.value.trim().toString() !== ''){
        url =  await fetch(`https://pixabay.com/api/?key=25997241-6c7f0ec8f64982fb05b632554&q=${image.value}`);
      
     } else{
@@ -29,6 +29,14 @@ const LoadDataFormImageUrl = async ()=>{
 }
 
 LoadDataFormImageUrl();
+
+document.getElementById('search-image').addEventListener('keypress', function(event){
+
+    if(event.keyCode === 13){
+        LoadDataFormImageUrl();
+    }
+})
+
 
 
 const displayImage = datas => {
