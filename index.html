@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image Api Call From Pexiles </title>
+
+    <style>
+        body{
+            width: 80%;
+            margin: auto;
+        }
+        .parent-elements{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap:3rem;
+        }
+        .image-div{
+            
+            border: 1px solid blue;
+            height: 200px;
+            border-radius: 5px;
+        }
+        .image-div img{
+            width: 100%;
+           max-height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+    
+    <div style="margin:20px auto; width: 80%; ">
+        <input id="search-image" style="width: 70%; padding: 10px;" type="text" placeholder="Search Image" > 
+        <button onclick="LoadDataFormImageUrl()" style="background-color: azure; cursor:pointer; padding:10px; font-size: 20px;">Search</button>
+    </div>
+
+    <div class="parent-elements" id="image">
+
+      
+
+    </div>
+
+
+
+    <script src="./app.js"></script>
+    
+</body>
+</html>
